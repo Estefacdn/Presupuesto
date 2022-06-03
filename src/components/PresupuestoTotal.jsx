@@ -4,7 +4,7 @@ export const PresupuestoTotal = ({ presupuesto }) => {
     return (
         <>
             <div className='muestra'>
-                <div>
+                <div className='tituloPresupuesto'>
                     PresupuestoTotal:{presupuesto}
                 </div>
                 <div className='imagen'>

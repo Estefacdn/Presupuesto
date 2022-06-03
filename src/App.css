@@ -14,6 +14,7 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 30px;
 }
 
 .formulario{
@@ -27,4 +28,67 @@ h1{
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.tituloPresupuesto{
+  text-align: center;
+  font-size: 50px;
+}
+
+.imagen{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.container{
+  position: relative;
+}
+
+.containerPercen{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  border: 12px solid rgb(117, 25, 25);
+  border-radius: 9999px;
+
+  height: 128px;
+  width: 128px;
+}
+
+.containerCurva{
+  left: 0;
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+
+  clip: rect(0px, 128px, 128px, 64px);
+
+  clip: rect(auto, auto, auto, auto);
+}
+
+.containerUno{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  border: 12px solid rgb(32, 10, 10);
+  border-radius: 9999px;
+}
+
+.containerDos{
+  clip: rect(0px, 64px, 128px, 0px);
+  transform: rotate(162deg);
+}
+
+.containerCuatro{
+  clip: rect(0px, 64px, 128px, 0px);
+
+  transform: rotate(0deg);
+
+  transform: rotate(180deg);
 }
