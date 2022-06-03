@@ -5,6 +5,7 @@ export const Header = () => {
     <div className='presupesto'>
         <h1>CONTROL DE PRESUPUESTO</h1>
     </div>
+    
   )
 }
 
