@@ -1,32 +1,64 @@
 import React from 'react';
-import '../Style/Modal.css'
-import { useState } from 'react';
+import '../Style/Modal.css';
+import { useForm } from 'react-hook-form';
+import { GASTOS } from '../constans';
 
+const Modal = ({ closeModal, nuevoGasto }) => {
+    const { register, formState: { errors }, handleSubmit } = useForm()
 
-const Modal = ({ isOpenModal, closeModal }) => {
-
+    const onSubmit = (data) => {
+        console.log(data)
+        nuevoGasto(data);
+    }
     return (
-        <div className="">
-            <div className={`modal ${isOpenModal && "modal-open"}`}>
+        <div className='modalBackground'>
+            <div className='modalContainer'>
 
-                <div className="modal__header">
-                    <h1>ADICIONAR GASTO</h1>
+                <div className='titleCloseBtn'>
+                    <button onClick={() => closeModal(false)}> X </button>
+
                 </div>
-                <form className="form-modal">
-                    <label>Nombre del gasto </label>
-                    <input type="text" />
+                <div className='title'>
+                    <h1>Formulario Presupuestos</h1>
+                </div>
 
-                    <label>Cantidad de presupuesto </label>
-                    <input type="number" />
+                <div className='body'>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div>
+                            <label>Nombre de Gasto</label>
+                            <input type="text" {...register('nombre del gasto', {
+                                required: true,
+                                maxLength: 10
+                            })} />
+                            {/* {errors.nombre_del_gastos?.type==='required'&& <p>campo del gasto requerido </p>} */}
+                        </div>
+                        <div>
+                            <label>Cantidad de Presupuesto</label>
+                            <input type="text" {...register('cantidad de presupuesto', {
+                                required: true,
+                                maxLength: 10
+                            })} />
+                        </div>
+                        <div>
+                            <label>Tipo de Gasto</label>
+                            <select {...register('tipo de gasto')}>
 
-                    <label>Tipo de gasto </label>
-                    <select />
-                    <option />
+                                <option value=""></option>
+                                {GASTOS.map(gasto => (
+                                    <option
+                                        key={gasto.id}
+                                        value={gasto.nombre}  >
+                                        {gasto.nombre}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className='footer'>
+                            <button onClick={() => closeModal(false)} >Cancelar</button>
+                            <button type='submit' value='Enviar'>Enviar</button>
+                        </div>
 
-                    <input type="submit" />
-                </form>
-                <div className="modal__footer">
-                    <a className="button-modal" onClick={closeModal}>Cancelar</a>
+                    </form>
                 </div>
             </div>
         </div>

@@ -10,42 +10,32 @@ import Modal from './components/Modal';
 function App() {
   const [presupuesto, setPresupuesto] = useState(0);
   const [irPresupuestoTotal, setIrPresupuestoTotal] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const handleAdicionarGasto = () => {
-    setIsOpenModal(true)
-  };
+  const [abrirModal, setAbrirModal] = useState(false)
+  const [gastos, setGastos] = useState([]);
 
-  const openModal = () => {
-    setIsOpenModal(true);
+  const nuevoGasto = (gasto) => {
+    setGastos([...gastos, gasto])
   }
 
-  const closeModal = () => {
-    setIsOpenModal(false);
-  }
+
   return (
     <div className="App">
 
       <Header />
-      {irPresupuestoTotal ? (<PresupuestoTotal presupuesto={presupuesto} />) : (<IngresoPresupuesto presupuesto={presupuesto} setPresupuesto={setPresupuesto} irPresupuestoTotal={irPresupuestoTotal} setIrPresupuestoTotal={setIrPresupuestoTotal} />)}
-          {irPresupuestoTotal && (
+      {abrirModal && (<Modal nuevoGasto={nuevoGasto} closeModal={setAbrirModal} />)}
+      {irPresupuestoTotal ? (<PresupuestoTotal presupuesto={presupuesto} />) : (<Grafica />) && (<IngresoPresupuesto presupuesto={presupuesto} setPresupuesto={setPresupuesto} irPresupuestoTotal={irPresupuestoTotal} setIrPresupuestoTotal={setIrPresupuestoTotal} />)}
+      {irPresupuestoTotal && (
         <div className="adicionar-gasto">
-          <img src={plus} alt="plus"
-            onClick={handleAdicionarGasto}
-          />
+          <button className='openModal' onClick={() => { setAbrirModal(true) }}>Enviar</button>
         </div>
       )}
-          <Modal
-    isOpenModal={isOpenModal}
-    closeModal={closeModal}
-              />
-      
-      <Grafica/>
+
+
+
 
     </div>
-    
- 
   );
- 
+
 }
 
 export default App;

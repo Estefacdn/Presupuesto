@@ -1,52 +1,52 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-h1{
+h1 {
   color: brown;
   font-family: 'Courier New', Courier, monospace;
   margin-top: 40px;
 }
 
-.presupesto{
+.presupesto {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
 }
 
-.formulario{
+.formulario {
   margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.padreFormulario{
+.padreFormulario {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.tituloPresupuesto{
+.tituloPresupuesto {
   text-align: center;
   font-size: 50px;
 }
 
-.imagen{
+.imagen {
   display: flex;
   text-align: center;
   justify-content: center;
   height: 300px;
 }
 
-.container{
+.container {
   position: relative;
 }
 
-.containerPercen{
+.containerPercen {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@ h1{
   width: 128px;
 }
 
-.containerCurva{
+.containerCurva {
   left: 0;
   position: absolute;
   top: 0;
@@ -71,7 +71,7 @@ h1{
   clip: rect(auto, auto, auto, auto);
 }
 
-.containerUno{
+.containerUno {
   height: 100%;
   position: absolute;
   width: 100%;
@@ -80,15 +80,17 @@ h1{
   border-radius: 9999px;
 }
 
-.containerDos{
+.containerDos {
   clip: rect(0px, 64px, 128px, 0px);
   transform: rotate(162deg);
 }
 
-.containerCuatro{
+.containerCuatro {
   clip: rect(0px, 64px, 128px, 0px);
 
   transform: rotate(0deg);
 
   transform: rotate(180deg);
 }
+
+/*----------------modal-------------*/
