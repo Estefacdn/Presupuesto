@@ -1,16 +1,14 @@
 import React from 'react'
+import { Bar } from 'react-chartjs-2'
 
 export const Grafica = () => {
+    const data = () => {
+
+    }
     return (
         <div className='container'>
-            <div className="containerPercen"></div>
-
-            <div className="containerCurva">
-                
-                <div className="containerUno containerDos"></div>
-                <div className="containerUno containerCuatro"></div>
-
-            </div>
+            <h1>Presupuesto</h1>
+            <Bar data={data}/>
         </div>
     )
 }

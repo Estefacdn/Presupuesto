@@ -8,7 +8,7 @@ export const IngresoPresupuesto = ({ presupuesto, setPresupuesto, setIrPresupues
     return (
         <div className='formulario' >
             <form className='padreFormulario' action="">
-                <input type="number" value={presupuesto} onChange ={(e)=>setPresupuesto(e.target.value)} />
+                <input type="number" value={presupuesto} onChange={(e) => setPresupuesto(e.target.value)} />
                 <button type='button' onClick={ingresoDato}>Ingreso presupuesto</button>
             </form>
         </div>

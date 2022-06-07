@@ -7,6 +7,7 @@ import PresupuestoTotal from './components/PresupuestoTotal';
 import plus from './components/img/plus.jpg';
 import Modal from './components/Modal';
 
+
 function App() {
   const [presupuesto, setPresupuesto] = useState(0);
   const [irPresupuestoTotal, setIrPresupuestoTotal] = useState(false);
@@ -29,6 +30,7 @@ function App() {
           <button className='openModal' onClick={() => { setAbrirModal(true) }}>Enviar</button>
         </div>
       )}
+
 
 
 
