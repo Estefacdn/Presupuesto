@@ -8,8 +8,9 @@ import plus from './components/img/plus.jpg';
 import Modal from './components/Modal';
 import ListadoDeGastos from './components/ListadoDeGastos';
 
+
 function App() {
-  const [presupuesto, setPresupuesto] = useState(0);
+  const [presupuesto, setPresupuesto] = useState([]);
   const [irPresupuestoTotal, setIrPresupuestoTotal] = useState(false);
   const [abrirModal, setAbrirModal] = useState(false)
   const [gastos, setGastos] = useState([]);
@@ -49,6 +50,7 @@ function App() {
           <button className='openModal' onClick={() => { setAbrirModal(true) }}>Enviar</button>
         </div>
       )}
+
 
 
 
