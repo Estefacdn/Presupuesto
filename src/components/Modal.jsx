@@ -9,6 +9,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
     const onSubmit = (data) => {
         console.log(data)
         nuevoGasto(data);
+        { closeModal(false) }
     }
     return (
         <div className='modalBackground'>
@@ -26,7 +27,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div>
                             <label>Nombre de Gasto</label>
-                            <input type="text" {...register('nombre del gasto', {
+                            <input type="text" {...register('nombre_gasto', {
                                 required: true,
                                 maxLength: 10
                             })} />
@@ -41,7 +42,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                         </div>
                         <div>
                             <label>Tipo de Gasto</label>
-                            <select {...register('tipo de gasto')}>
+                            <select {...register('tipo_gasto')}>
 
                                 <option value=""></option>
                                 {GASTOS.map(gasto => (

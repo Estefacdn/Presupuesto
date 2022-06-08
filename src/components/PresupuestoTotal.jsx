@@ -5,7 +5,16 @@ export const PresupuestoTotal = ({ presupuesto }) => {
         <>
             <div className='muestra'>
                 <div className='tituloPresupuesto'>
-                    PresupuestoTotal:{presupuesto}
+                    <p>
+                        Total presupuesto: col {presupuesto}
+                    </p>
+                    <p>
+                        Disponible: col 0
+                    </p>
+                    <p>
+                        Gastado: col 0
+                    </p>
+
                 </div>
                 <div className='imagen'>
                     <img src={torta} alt="" />

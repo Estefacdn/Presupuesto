@@ -6,6 +6,7 @@ import IngresoPresupuesto from './components/IngresoPresupuesto';
 import PresupuestoTotal from './components/PresupuestoTotal';
 import plus from './components/img/plus.jpg';
 import Modal from './components/Modal';
+import ListadoDeGastos from './components/ListadoDeGastos';
 
 function App() {
   const [presupuesto, setPresupuesto] = useState(0);
@@ -23,7 +24,26 @@ function App() {
 
       <Header />
       {abrirModal && (<Modal nuevoGasto={nuevoGasto} closeModal={setAbrirModal} />)}
-      {irPresupuestoTotal ? (<PresupuestoTotal presupuesto={presupuesto} />) : (<Grafica />) && (<IngresoPresupuesto presupuesto={presupuesto} setPresupuesto={setPresupuesto} irPresupuestoTotal={irPresupuestoTotal} setIrPresupuestoTotal={setIrPresupuestoTotal} />)}
+      {irPresupuestoTotal ? (
+        <>
+          <menu>
+            <ListadoDeGastos
+              gastos={gastos}
+            />
+          </menu>
+          <div>
+            <PresupuestoTotal
+              presupuesto={presupuesto}
+            />
+          </div>
+        </>) :
+        (<Grafica />) && (<IngresoPresupuesto
+          presupuesto={presupuesto}
+          setPresupuesto={setPresupuesto}
+          irPresupuestoTotal={irPresupuestoTotal}
+          setIrPresupuestoTotal={setIrPresupuestoTotal}
+        />)}
+
       {irPresupuestoTotal && (
         <div className="adicionar-gasto">
           <button className='openModal' onClick={() => { setAbrirModal(true) }}>Enviar</button>
