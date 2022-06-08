@@ -9,7 +9,7 @@ import Modal from './components/Modal';
 
 
 function App() {
-  const [presupuesto, setPresupuesto] = useState(0);
+  const [presupuesto, setPresupuesto] = useState([]);
   const [irPresupuestoTotal, setIrPresupuestoTotal] = useState(false);
   const [abrirModal, setAbrirModal] = useState(false)
   const [gastos, setGastos] = useState([]);
