@@ -4,7 +4,7 @@ import Grafica from './components/Grafica';
 import Header from './components/Header';
 import IngresoPresupuesto from './components/IngresoPresupuesto';
 import PresupuestoTotal from './components/PresupuestoTotal';
-import plus from './components/img/plus.jpg';
+//import plus from './components/img/plus.jpg';
 import Modal from './components/Modal';
 import ListadoDeGastos from './components/ListadoDeGastos';
 
@@ -50,11 +50,6 @@ function App() {
           <button className='openModal' onClick={() => { setAbrirModal(true) }}>Enviar</button>
         </div>
       )}
-
-
-
-
-
     </div>
   );
 

@@ -1,14 +1,14 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2'
+//import { Bar } from 'react-chartjs-2'
 
 export const Grafica = () => {
-    const data = () => {
+   /*  const data = () => {
 
-    }
+    } */
     return (
         <div className='container'>
             <h1>Presupuesto</h1>
-            <Bar data={data}/>
+            {/* <Bar data={data}/> */}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 //import torta from '../components/img/torta.png';
-import { Pie } from 'react-chartjs-2';
+//import { Pie } from 'react-chartjs-2';
 export const PresupuestoTotal = ({ presupuesto }) => {
    /*  const data=(
         dataSets[{
