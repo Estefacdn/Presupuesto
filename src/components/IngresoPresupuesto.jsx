@@ -9,9 +9,10 @@ export const IngresoPresupuesto = ({ presupuesto, setPresupuesto, setIrPresupues
 
     return (
         <div className='formulario' >
+            <h1 className='tituloCaja'>Define Presupuesto</h1>
             <form className='padreFormulario' action="">
-                <input type="number" value={presupuesto} onChange={(e) => setPresupuesto(e.target.value)} />
-                <button onClick={ingresoDato}>Ingreso presupuesto</button>
+                <input className='cajaIngreso' placeholder='Digite presupuesto a gestionar' type="number" value={presupuesto} onChange={(e) => setPresupuesto(e.target.value)} />
+                <button className='botonIngreso' onClick={ingresoDato}> Gestionar </button>
             </form>
         </div>
     )
